@@ -81,7 +81,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         }
         $content .= '</table></div>';    
 
-    $query = "SELECT * FROM cm_ticket WHERE cm_ticket.status = 'quoted'";
+    $query = "SELECT * FROM car_mart_ticket_new WHERE cm_ticket.status = 'quoted'";
     if ($res = mysqli_query($conn,$query)) {
         $rowcount = mysqli_num_rows( $res );
 
