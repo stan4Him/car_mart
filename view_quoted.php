@@ -4,7 +4,7 @@ $title = "Quotes";
 // Config
 include 'db_conn.php';
 
-$sql = "SELECT * FROM car_mart_ticket_new WHERE status = 'quoted' AND DATE(date_added) > DATE_SUB(CURDATE(), INTERVAL 7 DAY) ORDER BY QuoteNumber DESC";
+$sql = "SELECT * FROM car_mart_ticket_new WHERE `status` = 'quoted' AND DATE(date_added) > DATE_SUB(CURDATE(), INTERVAL 7 DAY) ORDER BY QuoteNumber DESC";
 //$sql = "SELECT * FROM cm_ticket,cm_iqs WHERE cm_ticket.status = 'quoted' AND cm_ticket.Ticket = cm_iqs.Ticket AND DATE(date_added) > DATE_SUB(CURDATE(), INTERVAL 7 DAY) ORDER BY QuoteNumber DESC";
 $result = mysqli_query($conn,$sql) or die(mysqli_error_no($conn));
 $content = '<h3 class="text-center">Quotes</h3>';
@@ -43,7 +43,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     }
     $content .= '</table></div>';
 
-    $sql = "SELECT * FROM car_mart_ticket_new  WHERE status = 'quoted' AND DATE(date_added) <= DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND DATE(date_added) > DATE_SUB(CURDATE(), INTERVAL 31 DAY) ORDER BY QuoteNumber DESC";
+    $sql = "SELECT * FROM car_mart_ticket_new  WHERE `status` = 'quoted' AND DATE(date_added) <= DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND DATE(date_added) > DATE_SUB(CURDATE(), INTERVAL 31 DAY) ORDER BY QuoteNumber DESC";
     $result = mysqli_query($conn,$sql) or die(mysqli_error_no($conn));
     $content .= '<h3 class="text-center">Quotes</h3>';
     $content .= '<div class="container-fluid text-center">';
