@@ -94,14 +94,15 @@ include 'error_handling.php';
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
-        <li class="nav-item"> <a class="nav-link" href="ticket_entry.php">Ticket Entry</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="index.php">Home</a> </li>    
+    <li class="nav-item"> <a class="nav-link" href="ticket_entry.php">Quote Entry</a> </li>
       <li class="nav-item"> <a class="nav-link" href="view_quoted.php">Quoted</a> </li>
       <li class="nav-item"> <a class="nav-link" href="view_invoiced.php">Invoiced</a> </li>
       <li class="nav-item"> <a class="nav-link" href="view_shipped.php">Shipped</a> </li>
       <li class="nav-item">  <a class="nav-link" href="index.php">Search</a></li>
         <li class="nav-item">  <a class="nav-link" href="ticket_delete.php">Delete Ticket</a></li>
+        <li class="nav-item"> <a class="nav-link" href="index.php">Dashboard</a> </li> 
         <li class="nav-item">  <a class="nav-link" href="email.php">Email Filter</a></li>
-        <li class="nav-item">  <a class="nav-link" href="po_tracker.php">PO Tracker</a></li>
     </ul>
   </div>
 </nav>
