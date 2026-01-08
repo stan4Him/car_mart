@@ -31,7 +31,7 @@ $content = '<div class="container">
         <tbody>';
 
 include 'db_conn.php';
-$query = "SELECT * FROM cm_ticket, cm_iqs WHERE cm_iqs.Ticket = cm_ticket.Ticket";
+$query = "SELECT * FROM car_mart_ticket_new ORDER BY date_added DESC";
 
 $result = mysqli_query($conn,$query);
 
