@@ -7,7 +7,7 @@ include 'db_conn.php';
 
 
 
-$sql = "INSERT INTO cm_ticket_del select * from cm_ticket WHERE Ticket='$Ticket'";
+$sql = "INSERT INTO car_mart_ticket_del select * from car_mart_ticket_new WHERE Ticket='$Ticket'";
 $result = mysqli_query($conn,$sql);
 
 if (!$result) {
@@ -28,7 +28,7 @@ else {
     $content .=  "<br > Parts Copied";
 
 }
-*/
+
 $sql3 = "INSERT INTO cm_iqs_del select * from cm_iqs WHERE Ticket='$Ticket'";
 $result3 = mysqli_query($conn,$sql3);
 
@@ -40,8 +40,8 @@ else {
 
 }
 
-
-$sql4= "DELETE from cm_ticket WHERE Ticket='$Ticket'";
+*/
+$sql4= "DELETE from car_mart_ticket_new WHERE Ticket='$Ticket'";
 $result4 = mysqli_query($conn,$sql4);
 
 if (!$result4) {
@@ -52,7 +52,7 @@ else {
 
 }
 
-
+/*
 
 $sql6 = "DELETE from cm_iqs WHERE Ticket='$Ticket'";
 $result6 = mysqli_query($conn,$sql6);
@@ -64,6 +64,6 @@ else {
     $content .=  "<br > IQS Deleted";
 
 }
-
+*/
 include 'template_bootstrap.php';
 ?>
