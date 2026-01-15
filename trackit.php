@@ -75,4 +75,4 @@ else {
 
 
 
-include 'template_bootstrap_no_nav.php';
+include 'template_bootstrap.php';

@@ -166,6 +166,55 @@ $content .= "</tr>";
 $content .= "
 </tbody>
 </table>";
+$content .= '<p>Track A PO:</p>
+<form method=POST action="trackit.php">
+<input type="text" name="PO" id="PO" placeholder="Enter PO to track">
+<br><br>
+<input type="submit" class="btn btn-primary" value="Send">
+</form>
+';
+
+$sql = "SELECT * FROM car_mart_ticket_new WHERE status = 'shipped' AND  date_updated >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)";
+$sql2 = "SELECT * FROM car_mart_ticket_new WHERE status = 'shipped' AND  date_updated >= DATE_SUB(CURDATE(), INTERVAL 90 DAY)";
+$sql3 = "SELECT * FROM car_mart_ticket_new WHERE status = 'shipped' AND  date_updated >= DATE_SUB(CURDATE(), INTERVAL 180 DAY)";
+
+if ($res = mysqli_query($conn, $sql)) {
+
+    // Return the number of rows in result set
+    $rowcount = mysqli_num_rows( $res );
+    
+    // Display result
+    
+        $content .= "<br>Tickets Shipped This Month: ";
+        $content .= $rowcount;
+    
+    //printf("\r\nTickets Shipped This Month:  %d\n", $rowcount);
+ }
+ if ($res2 = mysqli_query($conn, $sql2)) {
+
+    // Return the number of rows in result set
+    $rowcount2 = mysqli_num_rows( $res2 );
+    
+    // Display result
+   // printf("\r\nTickets Shipped This Quarter:  %d\n", $rowcount2);
+
+    $content .= "<br>Tickets Shipped This Quarter: ";
+    $content .= $rowcount2;
+ }
+ if ($res3 = mysqli_query($conn, $sql3)) {
+
+    // Return the number of rows in result set
+    $rowcount3 = mysqli_num_rows( $res3 );
+    
+    // Display result
+    //printf("\r\nTickets Shipped Last 6 months:  %d\n", $rowcount3);
+    $content .= "<br>Tickets Shipped Last 6 Months: ";
+    $content .= $rowcount3;
+ }
+
+$content .= "
+</tbody>
+</table>";
 
 include 'template_bootstrap.php';
 ?>

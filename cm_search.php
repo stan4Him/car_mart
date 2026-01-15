@@ -23,7 +23,7 @@ $content = '<div class="container">
                 <th>Added</th>
                 <th>Quote</th>
                 <th>Invoice</th>
-                <th>PO</th>
+                <th>PO Number</th>
                 <th>Shipper</th>
                 <th>Tracking</th>
             </tr>

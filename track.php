@@ -7,4 +7,4 @@ $content = '
 <input type="submit" class="btn btn-primary" value="Send">
 </form>
 ';
-include 'template_bootstrap_no_nav.php';
+include 'template_bootstrap.php';

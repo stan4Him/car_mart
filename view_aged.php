@@ -5,9 +5,9 @@ $title = "Aged Out Quotes";
 include 'db_conn.php';
 
 
-$sql = "SELECT * FROM car_mart_ticket_aged  ORDER BY date_added ASC";
+$sql = "SELECT * FROM car_mart_ticket_aged  ORDER BY date_added DESC";
 $result = mysqli_query($conn,$sql) or die(mysqli_error($conn));
-$content .= '<h3 class="text-center">Aged Quotes</h3>';
+$content = '<h3 class="text-center">Aged Quotes</h3>';
 $content .= '<div class="container-fluid text-center">';
 $content .=  '<p class="bg-primary text-white">More Than 30 days old.</p>';
 $content .= '<table class ="table">';
