@@ -5,7 +5,7 @@ $title = "Aged Out Quotes";
 include 'db_conn.php';
 
 
-$sql = "SELECT * FROM cm_ticket WHERE status = 'aged' ORDER BY date_added ASC";
+$sql = "SELECT * FROM car_mart_ticket_aged  ORDER BY date_added ASC";
 $result = mysqli_query($conn,$sql) or die(mysqli_error($conn));
 $content .= '<h3 class="text-center">Aged Quotes</h3>';
 $content .= '<div class="container-fluid text-center">';

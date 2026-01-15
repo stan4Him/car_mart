@@ -9,10 +9,10 @@ $success='support@fulllineexhaust.com';
 
 include 'db_conn.php';
 
-$sql = "SELECT * FROM cm_iqs WHERE PONumber = '$PO' AND Shipper = 'ups'";
+$sql = "SELECT * FROM car_mart_ticket_new WHERE PONumber = '$PO' AND Shipper = 'UPS'";
 $result = mysqli_query($conn,$sql);
 
-$sql2 = "SELECT * FROM cm_iqs WHERE PONumber = '$PO' AND Shipper = 'fedex'";
+$sql2 = "SELECT * FROM car_mart_ticket_new WHERE PONumber = '$PO' AND Shipper = 'Fedex'";
 $result2 = mysqli_query($conn,$sql2);
 
 
